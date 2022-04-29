@@ -5,9 +5,9 @@ Sign documents using Italian CNS (Carta Nazionale dei Servizi).
 ## Prerequisites
 
 The CNS is just an ordinary smart card holding a cryptographic certificate. In
-order to use you will need a smart card reader. Some laptops such as my ThinkPad
-X250 might ship with a buil-in reader, otherwise you will need to buy an USB
-smart card reader.
+order to use it you will need a smart card reader. Some laptops such as my
+ThinkPad X250 might ship with a buil-in reader, otherwise you will need to buy
+an USB smart card reader.
 
 The Italian CNS must be activated. Once the smart card has been activated you
 will receive PIN, PUK and CIP codes. Refer to you region administrative website
@@ -27,12 +27,12 @@ make build
 
 #### Make variables
 
-- `DOCKER`: docker-compatible binary (e.g. `podman`)
+- `DOCKER`: docker-compatible binary (e.g. `podman`). Default: `docker`
 
 ### Run the Docker container
 
 ```
-make run
+make DEVICE=/dev/bus/usb/001/002 run
 ```
 
 #### Make variables
